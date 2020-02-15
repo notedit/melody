@@ -13,6 +13,9 @@ import (
 type Session struct {
 	Request *http.Request
 	Keys    map[string]interface{}
+	ID      string
+	User    uint32
+	Room    string
 	conn    *websocket.Conn
 	output  chan *envelope
 	melody  *Melody
